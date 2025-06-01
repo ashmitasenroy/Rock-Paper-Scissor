@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPS Game</title>
-    <link rel="stylesheet" href="game.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="game.css" />
 </head>
 <body>
-    <h1>Rock  Paper  Scissors</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="rock.png" />
-        </div>
-        <div class="choice" id="paper">
-            <img src="paper.png" />
-        </div>
-        <div class="choice" id="scissors">
-            <img src="scissors.png" />
-        </div>
+  <h1>Rock Paper Scissors</h1>
+
+  <div class="choices">
+    <div class="choice" id="rock" tabindex="0" aria-label="Rock">
+      <img src="rock.png" alt="Rock" />
     </div>
-
-    <div class="score-board">
-        <div class="score">
-            <p>You</p>
-            <p  id="uscore">0</p>
-        </div>
-        <div class="score">
-            <p>Compt</p>
-            <p id="cscore">0</p>
-        </div>
+    <div class="choice" id="paper" tabindex="0" aria-label="Paper">
+      <img src="paper.png" alt="Paper" />
     </div>
-
-    <div class="message">
-        <p id="move">Play your move</p>
+    <div class="choice" id="scissors" tabindex="0" aria-label="Scissors">
+      <img src="scissors.png" alt="Scissors" />
     </div>
+  </div>
 
+  <div class="score-board">
+    <div class="score">
+      <p>You</p>
+      <p id="uscore">0</p>
+    </div>
+    <div class="score">
+      <p>Computer</p>
+      <p id="cscore">0</p>
+    </div>
+  </div>
 
+  <div class="message">
+    <p id="move">Play your move</p>
+  </div>
 
-
-
-    <script src="game.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
