@@ -1,68 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-h1{
-    color: white;
-    background-color: rgb(107, 156, 248);
-    border: 2px solid whitesmoke;
-    font-size: 2rem;
-    word-spacing: 15px;
-
-    
-}
-.choices{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    margin-top: 5rem;
-
-}
-.choice{
-    height: 165px;
-    width: 165px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-.choice:hover{
-    background-color: black;
-    cursor: pointer;
+/* Reset and center everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
+body {
+  background: #6b9cf8;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1rem;
 }
-.score-board{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-top: 2rem;
-    gap: 5rem;
-}
-#uscore, #cscore{
-font-size: 4rem;
 
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid whitesmoke;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #446cd1;
+  word-spacing: 15px;
+  user-select: none;
 }
-.message{
-    margin-top: 3rem;
+
+/* Choices container */
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
 }
-#move{
-    background-color: cornflowerblue;
-    color: white;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-    border-radius: 2rem;
+
+/* Each choice circle */
+.choice {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  user-select: none;
+}
+
+.choice:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 4px;
+}
+
+.choice:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Images inside choices */
+.choice img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  pointer-events: none; /* so clicks go to parent div */
+  user-select: none;
+}
+
+/* Scoreboard */
+.score-board {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.score p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+#uscore, #cscore {
+  font-size: 3.5rem;
+  color: #ffd700;
+  font-weight: 700;
+}
+
+/* Message box */
+.message {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1.2rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  max-width: 380px;
+  user-select: none;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
